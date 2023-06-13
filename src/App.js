@@ -1,24 +1,24 @@
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-
+import Home from "./components/Home";
+import NotFound from "./components/NotFound";
+import Videos from "./components/Videos";
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <p>Home</p>,
-    errorElement: <p>Not Found</p>
+    element: <Home />,
+    errorElement: <NotFound />,
   },
   {
     path: '/videos',
-    element: <p>Videos</p>
+    element: <Videos />
   },
 
 ]);
 
 function App() {
   return (
-    <RouterProvider router={router}>
-
-    </RouterProvider>
+    <RouterProvider router={router} />
   );
 }
 
