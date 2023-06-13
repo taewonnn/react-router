@@ -14,13 +14,14 @@ function Videos () {
   const handleSubmit = (e) => {
     e.preventDefault();
     setText('');
-  }
+    navigate(`/videos/${text}`)
+  };
 
 
   return (
     <div>
       Videos
-      <form>
+      <form onSubmit={handleSubmit}>
         <input type='text' placeholder='video id' value={text} onChange={handleChange} />
       </form>
     </div>
